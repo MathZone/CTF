@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.ctf.eu.Commands.Money.AddCash;
 import org.ctf.eu.Commands.Money.Bal;
 import org.ctf.eu.Commands.TeamCommands.JoinTeam;
+import org.ctf.eu.Commands.TeamCommands.LeaveTeam;
 import org.ctf.eu.Commands.TestCmd;
 import org.ctf.eu.Commands.ToggleBreaking;
 import org.ctf.eu.Upgrades.UpgradeGui;
@@ -17,8 +18,10 @@ import java.util.HashMap;
 import java.util.List;
 
 import static org.ctf.eu.Functions.makeMenuGlass;
-import static org.ctf.eu.Teams.BlueFlag.makeBlueFlag;
-import static org.ctf.eu.Teams.RedFlag.makeRedFlag;
+import static org.ctf.eu.Teams.Blue.BlueArmor.makeBlueArmor;
+import static org.ctf.eu.Teams.Blue.BlueFlag.makeBlueFlag;
+import static org.ctf.eu.Teams.Red.RedArmor.makeRedArmor;
+import static org.ctf.eu.Teams.Red.RedFlag.makeRedFlag;
 import static org.ctf.eu.Upgrades.UpgradeGui.makeUpgradeGui;
 
 public class Main extends JavaPlugin {
@@ -30,6 +33,9 @@ public class Main extends JavaPlugin {
     public static ItemStack menuGlass;
     public static ItemStack blueFlag;
     public static ItemStack redFlag;
+
+    public static ItemStack[] redArmor = makeRedArmor();
+    public static ItemStack[] blueArmor = makeBlueArmor();
 
     public static Inventory upgradesGui;
 
@@ -54,6 +60,7 @@ public class Main extends JavaPlugin {
         this.getCommand("addcash").setExecutor(new AddCash());
         this.getCommand("upgrades").setExecutor(new UpgradeGui());
         this.getCommand("jointeam").setExecutor(new JoinTeam());
+        this.getCommand("leaveteam").setExecutor(new LeaveTeam());
     }
 
     @Override

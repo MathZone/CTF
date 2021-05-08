@@ -30,5 +30,9 @@ commands:
     usage: /<command>
 
   jointeam:
-    description: opens upgrades gui
+    description: joins a team
+    usage: /<command>
+
+  leaveteam:
+    description: leaves a team
     usage: /<command>

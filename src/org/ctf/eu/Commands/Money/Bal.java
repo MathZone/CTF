@@ -1,6 +1,5 @@
 package org.ctf.eu.Commands.Money;
 
-import net.minecraft.server.v1_16_R3.CommandDataAccessor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

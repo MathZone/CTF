@@ -1,4 +1,4 @@
-package org.ctf.eu.Teams;
+package org.ctf.eu.Teams.Red;
 
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
@@ -11,7 +11,10 @@ public class RedFlag {
     public static ItemStack makeRedFlag(){
         ItemStack itemStack = new ItemStack(Material.RED_BANNER);
         BannerMeta bannerMeta = (BannerMeta) itemStack.getItemMeta();
-        bannerMeta.addPattern(new Pattern(DyeColor.BLACK, PatternType.CIRCLE_MIDDLE));
+        bannerMeta.addPattern(new Pattern(DyeColor.LIGHT_GRAY, PatternType.GRADIENT));
+        bannerMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.CURLY_BORDER));
+        bannerMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.CIRCLE_MIDDLE));
+        bannerMeta.addPattern(new Pattern(DyeColor.WHITE, PatternType.STRIPE_SMALL));
         itemStack.setItemMeta(bannerMeta);
         return itemStack;
     }

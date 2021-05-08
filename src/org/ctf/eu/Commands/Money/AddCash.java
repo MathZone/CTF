@@ -17,7 +17,7 @@ public class AddCash implements CommandExecutor {
                 commandSender.sendMessage("no amount given");
                 return false;
             } else {
-                    bal.put((Player) commandSender,bal.get((Player) commandSender) + Integer.parseInt(strings[0]));
+                    bal.put((Player) commandSender,bal.get((Player)   commandSender) + Integer.parseInt(strings[0]));
                     commandSender.sendMessage(ChatColor.RED + "Added " + strings[0] + "$ to bal");
                 return true;
             }
